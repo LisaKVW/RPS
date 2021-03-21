@@ -4,12 +4,13 @@ showRock = (event) => {
   click.innerHTML = "Rock"
   userChoice = "Rock"
 
-  showComp.innerHTML = computerPick
+  random()
+  // showComp.innerHTML = computerPick
   compare()
 }
-
 let rockBtn = document.querySelector("#rock-btn")
 rockBtn.addEventListener("click", showRock)
+
 
 // User Paper Button
 showPaper = (event) => {
@@ -17,7 +18,8 @@ showPaper = (event) => {
   click.innerHTML = "Paper"
   userChoice = "Paper"
 
-  showComp.innerHTML = computerPick
+  random()
+  // showComp.innerHTML = computerPick
   compare()
 }
 
@@ -30,7 +32,8 @@ showScissors = (event) => {
   click.innerHTML = "Scissors"
   userChoice = "Scissors"
 
-  showComp.innerHTML = computerPick
+  random()
+  // showComp.innerHTML = computerPick
   compare()
 }
 
@@ -41,35 +44,38 @@ scissorsBtn.addEventListener("click", showScissors)
 // create computer function for R P S - random()
 
 let optionsPC = ["Rock", "Paper", "Scissors"]
-let computerPick = optionsPC[Math.floor(Math.random() * optionsPC.length)]
-console.log("Computer picks", computerPick)
+
+random = () => {
+  let computerPick = optionsPC[Math.floor(Math.random() * optionsPC.length)]
+  showComp.innerHTML = computerPick
+  console.log("Computer picks", computerPick)
+}
 
 let showComp = document.querySelector("#computer-pick")
-// showComp.innerHTML = computerPick
-// let computerSelect = document.querySelector("#computer-pick")
-
 
 // create if or SWITCH to show how you can win - BEGIN GAME
-
 let showResult = document.querySelector("#result")
 
 compare = () => {
-  if (userChoice === computerPick) {
+  if (userChoice === showComp.innerHTML) {
     showResult.innerHTML = "Its a tie!"
-  } else if (userChoice === "Paper" && computerPick === "Rock") {
+  } else if (userChoice === "Paper" && showComp.innerHTML === "Rock") {
     showResult.innerHTML = "You won!"
-  } else if (userChoice === "Scissors" && computerPick === "Rock") {
+  } else if (userChoice === "Scissors" && showComp.innerHTML === "Rock") {
     showResult.innerHTML = "Loser!"
-  } else if (userChoice === "Rock" && computerPick === "Paper") {
+  } else if (userChoice === "Rock" && showComp.innerHTML === "Paper") {
     showResult.innerHTML = "Loser!"
-  } else if (userChoice === "Rock" && computerPick === "Scissors") {
+  } else if (userChoice === "Rock" && showComp.innerHTML === "Scissors") {
     showResult.innerHTML = "You Won!"
-  } else if (userChoice === "Paper" && computerPick === "Scissors") {
+  } else if (userChoice === "Paper" && showComp.innerHTML === "Scissors") {
     showResult.innerHTML = "Loser!"
-  } else if (userChoice === "Scissors" && computerPick === "Paper") {
+  } else if (userChoice === "Scissors" && showComp.innerHTML === "Paper") {
     showResult.innerHTML = "You Won!"
   }
 }
+
+
+
 // compare = () => {
 //   if (userChoice === "Rock" && computerPick === "Rock") {
 //     showResult.innerHTML = "Its a tie!"
