@@ -1,4 +1,8 @@
 // User Rock Button
+let theRock = document.createElement("img")
+theRock = "https://tenor.com/view/sterkte-macht-the-rock-rock-baywatch-gif-10178359"
+// how to append an image in javascript????
+
 showRock = (event) => {
   let click = document.querySelector("#show-user-click")
   click.innerHTML = "Rock"
