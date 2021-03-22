@@ -1,0 +1,31 @@
+h1, h3, #result {
+text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 15% 35% 35% 15% ;
+  border: 2px solid red;
+  border-radius: 25px;
+}
+
+#player-score-wrap{
+  padding-left:10%
+}
+
+#player-image {
+text-align: center;
+}
+
+#enemy-image {
+text-align: center;
+}
+
+#enemy-score-wrap {
+  padding-right: 10%
+}
+
+.all-button {
+  text-align: center;
+  margin-top: 2%;
+}

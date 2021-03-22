@@ -51,22 +51,22 @@ compare = () => {
     showResult.innerHTML = "Its a tie!"
   } else if (userChoice === "Paper" && showComp.innerHTML === "Rock") {
     showResult.innerHTML = "You won!"
-    player.innerHTML ++
+    player.innerHTML++
   } else if (userChoice === "Scissors" && showComp.innerHTML === "Rock") {
     showResult.innerHTML = "Loser!"
-    enemy.innerHTML ++
+    enemy.innerHTML++
   } else if (userChoice === "Rock" && showComp.innerHTML === "Paper") {
     showResult.innerHTML = "Loser!"
-    enemy.innerHTML ++
+    enemy.innerHTML++
   } else if (userChoice === "Rock" && showComp.innerHTML === "Scissors") {
     showResult.innerHTML = "You Won!"
-    player.innerHTML ++
+    player.innerHTML++
   } else if (userChoice === "Paper" && showComp.innerHTML === "Scissors") {
     showResult.innerHTML = "Loser!"
-    enemy.innerHTML ++
+    enemy.innerHTML++
   } else if (userChoice === "Scissors" && showComp.innerHTML === "Paper") {
     showResult.innerHTML = "You Won!"
-    player.innerHTML ++
+    player.innerHTML++
   }
 }
 
